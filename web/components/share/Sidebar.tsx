@@ -11,10 +11,8 @@ const Sidebar = () => {
   const pathname = usePathname(); // Récupère le chemin actif
   const [activeParent, setActiveParent] = useState(""); // État pour le parent actif
   const [activeChild, setActiveChild] = useState(""); // État pour l'enfant actif
-
   // Gestion de l'état pour afficher ou cacher le menu
   const [isMenuVisible, setIsMenuVisible] = useState(false);
-
   const showMenu = () => {
     setIsMenuVisible((prev) => !prev); // Inverser l'état actuel
   };
@@ -32,63 +30,69 @@ const Sidebar = () => {
   const links = [
     {
       name: "Dashboard",
-      href: "/",
+      href: "/admin/",
       icon: <FaHome />,
       subLinks: [],
     },
     {
       name: "Gestion des stocks",
-      href: "/dashboard",
+      href: "/admin/dashboard",
       icon: <FaBox />,
       subLinks: [
-        { name: "Tout les Produits", href: "/dashboard/allProduct" },
-        { name: "Catégories", href: "/dashboard/categorie" },
-        { name: "Historique", href: "/dashboard/historique" },
-        { name: "Nouveau Produit", href: "/dashboard/new" },
+        { name: "Tout les Produits", href: "/admin/dashboard/allProduct" },
+        { name: "Catégories", href: "/admin/dashboard/categorie" },
+        { name: "Historique", href: "/admin/dashboard/historique" },
+        { name: "Nouveau Produit", href: "/admin/dashboard/new" },
       ],
     },
     {
       name: "Comptabilité",
-      href: "/Accounting",
+      href: "/admin/Accounting",
       icon: <FaMoneyBill />,
       subLinks: [
-        { name: "Compte", href: "/Accounting/account" },
-        { name: "Raports", href: "/Accounting/history" },
-        { name: "Profit", href: "/Accounting/profit" },
-        { name: "Vente", href: "/Accounting/sale" },
+        { name: "Compte", href: "/admin/Accounting/account" },
+        { name: "Raports", href: "/admin/Accounting/history" },
+        { name: "Profit", href: "/admin/Accounting/profit" },
+        { name: "Vente", href: "/admin/Accounting/sale" },
       ],
     },
     {
       name: "Commande",
-      href: "/orders",
+      href: "/admin/orders",
       icon: <FaShoppingCart />,
       subLinks: [
-        { name: "Commande en cours...", href: "/orders/activeOrders" },
-        { name: "Commande anuler", href: "/orders/failedOrders" },
-        { name: "Historique de commande", href: "/orders/historiqueOrders" },
-        { name: "Commande utilisateurs", href: "/orders/userOders" },
+        { name: "Commande en cours...", href: "/admin/orders/activeOrders" },
+        { name: "Commande anuler", href: "/admin/orders/failedOrders" },
+        {
+          name: "Historique de commande",
+          href: "/admin/orders/historiqueOrders",
+        },
+        { name: "Commande utilisateurs", href: "/admin/orders/userOders" },
       ],
     },
     {
       name: "Chatbot",
-      href: "/chatbot",
+      href: "/admin/chatbot",
       icon: <FaRobot />,
       subLinks: [
-        { name: "Id Campagne ads", href: "/chatbot/allCampagneProductId" },
-        { name: "Id Poste facebook", href: "/chatbot/allPostProductId" },
-        { name: "Mise a jour", href: "/chatbot/crudProduct" },
-        { name: "Nouveau Produit", href: "/chatbot/newProduct" },
+        {
+          name: "Id Campagne ads",
+          href: "/admin/chatbot/allCampagneProductId",
+        },
+        { name: "Id Poste facebook", href: "/admin/chatbot/allPostProductId" },
+        { name: "Mise a jour", href: "/admin/chatbot/crudProduct" },
+        { name: "Nouveau Produit", href: "/admin/chatbot/newProduct" },
       ],
     },
     {
       name: "Navigation",
-      href: "/",
+      href: "/admin/",
       icon: <FaMap />,
       subLinks: [
-        { name: "App livraison", href: "/menu/livraison" },
-        { name: "Équipes", href: "/menu/teams" },
-        { name: "À propos", href: "/menu/about" },
-        { name: "Contact", href: "/menu/contact" },
+        { name: "App livraison", href: "/admin/menu/livraison" },
+        { name: "Équipes", href: "/admin/menu/teams" },
+        { name: "À propos", href: "/admin/menu/about" },
+        { name: "Contact", href: "/admin/menu/contact" },
       ],
     },
   ];
