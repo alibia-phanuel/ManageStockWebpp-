@@ -19,12 +19,12 @@ const Sidebar = () => {
     setIsMenuVisible((prev) => !prev); // Inverser l'état actuel
   };
 
-  const handleParentClick = (parentHref) => {
+  const handleParentClick = (parentHref: string) => {
     setActiveParent(parentHref); // Définit le parent actif
     setActiveChild(""); // Réinitialise l'enfant actif
   };
 
-  const handleChildClick = (childHref, parentHref) => {
+  const handleChildClick = (childHref: string, parentHref: string) => {
     setActiveParent(parentHref); // Définit le parent actif
     setActiveChild(childHref); // Définit l'enfant actif
   };
