@@ -13,7 +13,7 @@ const Header = () => {
         <Navigation />
         <div>
           <p className=" font-semibold">
-            <Link className="text-red-500" href="#">
+            <Link className="text-red-500" href="##">
               Se déconnecter
             </Link>
           </p>
