@@ -53,8 +53,8 @@ const Page = () => {
   };
 
   return (
-    <div className="flex justify-center pt-[200px]">
-      <div className="flex justify-center flex-col items-center gap-8  min-w-[599px]">
+    <div className="flex justify-center pt-[160px] px-4  h-screen">
+      <div className="flex justify-center flex-col items-center gap-8  max-w-[500px]">
         <div className=" flex flex-col gap-11">
           <div className="bg-[#4C5459] p-2 rounded-lg">
             <Image src="/asset/logo.png" width={500} height={500} alt="Logo" />
