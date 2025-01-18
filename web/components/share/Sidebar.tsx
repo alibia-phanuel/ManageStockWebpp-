@@ -45,6 +45,21 @@ const Sidebar = () => {
         { name: "Nouveau Produit", href: "/admin/dashboard/new" },
       ],
     },
+
+    {
+      name: "Chatbot",
+      href: "/admin/chatbot",
+      icon: <FaRobot />,
+      subLinks: [
+        {
+          name: "Id Campagne ads",
+          href: "/admin/chatbot/allCampagneProductId",
+        },
+        { name: "Id Poste facebook", href: "/admin/chatbot/allPostProductId" },
+        { name: "Mise a jour", href: "/admin/chatbot/crudProduct" },
+        { name: "Nouveau Produit", href: "/admin/chatbot/newProduct" },
+      ],
+    },
     {
       name: "Comptabilité",
       href: "/admin/Accounting",
@@ -68,20 +83,6 @@ const Sidebar = () => {
           href: "/admin/orders/historiqueOrders",
         },
         { name: "Commande utilisateurs", href: "/admin/orders/userOders" },
-      ],
-    },
-    {
-      name: "Chatbot",
-      href: "/admin/chatbot",
-      icon: <FaRobot />,
-      subLinks: [
-        {
-          name: "Id Campagne ads",
-          href: "/admin/chatbot/allCampagneProductId",
-        },
-        { name: "Id Poste facebook", href: "/admin/chatbot/allPostProductId" },
-        { name: "Mise a jour", href: "/admin/chatbot/crudProduct" },
-        { name: "Nouveau Produit", href: "/admin/chatbot/newProduct" },
       ],
     },
     {
@@ -115,7 +116,7 @@ const Sidebar = () => {
           </div>
         </div>
         <aside
-          className={`w-[250px] max-md:top-[60px]  p-[20px] md:border-r-4 max-md:relative max-md:w-full transition-all  ${
+          className={`w-[250px] max-md:top-[25px] z-50  p-[20px] md:border-r-4 max-md:relative max-md:w-full transition-all  ${
             isMenuVisible
               ? "max-md:translate-x-[0%]"
               : "max-md:translate-x-[-100%]"
