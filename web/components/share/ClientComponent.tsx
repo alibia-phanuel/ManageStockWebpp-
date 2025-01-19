@@ -10,8 +10,19 @@ import {
   TableHeader,
   TableRow,
 } from "@/components/ui/table";
+interface Post {
+  id: string; // Remplacez par `number` si les ID sont numériques
+  created_time: string; // Assurez-vous que ce type correspond au format de vos données
+}
 
-const ClientComponent = ({ posts, numberPage }) => {
+interface ClientComponentProps {
+  posts: Post[];
+  numberPage: number;
+}
+const ClientComponent: React.FC<ClientComponentProps> = ({
+  posts,
+  numberPage,
+}) => {
   return (
     <div className="container mx-auto p-4">
       <h1 className="text-3xl font-bold mb-4 text-blue-600">
@@ -22,7 +33,6 @@ const ClientComponent = ({ posts, numberPage }) => {
         <TableHeader>
           <TableRow>
             <TableHead>ID</TableHead>
-
             <TableHead>Date de création</TableHead>
           </TableRow>
         </TableHeader>
