@@ -4,7 +4,6 @@ import { useEffect } from "react";
 
 const RouteGuard = ({ children }: { children: React.ReactNode }) => {
   const router = useRouter();
-
   useEffect(() => {
     const authData = localStorage.getItem("authData");
 

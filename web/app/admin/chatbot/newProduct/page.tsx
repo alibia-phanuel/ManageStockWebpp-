@@ -4,7 +4,7 @@ import Formulaire from "@/components/Formulaire";
 const Page = () => {
   return (
     <RouteGuard>
-      <div className="flex justify-center   items-center relative py-6">
+      <div className="flex justify-center   items-center relative py-6 px-3">
         <Formulaire />
       </div>
     </RouteGuard>

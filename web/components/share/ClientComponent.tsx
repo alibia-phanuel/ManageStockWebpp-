@@ -1,5 +1,6 @@
+"use client";
 // app/admin/chatbot/allPostProductId/ClientComponent.tsx
-"use client"; // Indique que ce composant est un composant client
+// Indique que ce composant est un composant client
 
 import {
   Table,

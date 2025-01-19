@@ -1,4 +1,4 @@
-import fetchPosts from "@/pages/api/facebookApi";
+import fetchPosts from "@/page/api/facebookApi";
 import ClientComponent from "@/components/share/ClientComponent";
 
 const Page = async () => {
@@ -17,7 +17,7 @@ const Page = async () => {
 
   return (
     <>
-      <div className=" flex">
+      <div className=" flex flex-wrap">
         <ClientComponent posts={allPostsOne} numberPage={1} />
         <ClientComponent posts={allPostsTwo} numberPage={2} />
       </div>
